@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int ackermann(int m, int n) {
@@ -14,9 +13,7 @@ int ackermann(int m, int n) {
 int ackermannLoop(int m, int n) {
     int s[100000];
     int top = 0;
-
     s[top++] = m;
-
     while (top > 0) {
         m = s[--top];
 
@@ -31,14 +28,12 @@ int ackermannLoop(int m, int n) {
             n--;
         }
     }
-
     return n;
 }
 
 int main() {
     int m = 2;
     int n = 3;
-
     cout << "Recursive: " << ackermann(m, n) << '\n';
     cout << "Non-recursive: " << ackermannLoop(m, n) << '\n';
 
